@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdinasir Jama - DevOps Engineer Portfolio</title>
-    
-    <!-- External Libraries -->
+    <title>Abdinasir Jama - Senior DevOps Engineer Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         * {
             font-family: 'Inter', sans-serif;
         }
@@ -26,159 +24,148 @@
         
         .tech-badge:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         .project-card {
             transition: all 0.3s ease;
-            border: 1px solid #e5e7eb;
+            border-left: 4px solid #667eea;
         }
         
         .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-color: #6366f1;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        .timeline-item {
+        .phase-item {
+            border-left: 2px solid #e5e7eb;
             position: relative;
-            padding-left: 2rem;
         }
         
-        .timeline-item::before {
+        .phase-item::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 0.75rem;
-            height: 0.75rem;
-            background: #6366f1;
+            left: -6px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: #667eea;
             border-radius: 50%;
         }
         
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 0.375rem;
-            top: 1.25rem;
-            width: 2px;
-            height: calc(100% - 1rem);
-            background: #e5e7eb;
-        }
-        
-        .timeline-item:last-child::after {
-            display: none;
-        }
-        
         .skill-bar {
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 4px;
-            overflow: hidden;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 4px;
+            border-radius: 2px;
         }
         
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            border-radius: 4px;
-            transition: width 2s ease-in-out;
+        .contact-icon {
+            transition: all 0.3s ease;
         }
         
-         {
-            body {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
+        .contact-icon:hover {
+            transform: scale(1.1);
+            color: #667eea;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    
-    <!-- Header -->
-    <header class="gradient-bg text-white py-20">
-        <div class="container mx-auto px-6">
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="text-center">
-                <div class="mb-6">
-                    <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center text-6xl font-bold text-indigo-600 shadow-lg">
-                        AJ
-                    </div>
-                </div>
                 <h1 class="text-5xl font-bold mb-4">Abdinasir Jama</h1>
-                <p class="text-2xl mb-6 text-indigo-100">DevOps Engineer & Cloud Architect</p>
-                <p class="text-lg mb-8 max-w-2xl mx-auto text-indigo-100">
-                    Passionate about automation, cloud infrastructure, and building scalable systems. 
-                    Transforming development workflows through DevOps best practices.
-                </p>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://github.com/abdi76" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition duration-300">
-                        <i class="fab fa-github mr-2"></i> GitHub
+                <h2 class="text-2xl font-light mb-6">Senior DevOps Engineer | Cloud Architect | Automation Specialist</h2>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:abdi76@email.com" class="contact-icon text-xl hover:text-yellow-300">
+                        <i class="fas fa-envelope"></i> abdi76@email.com
                     </a>
-                    <a href="/cdn-cgi/l/email-protection#0d6c6f69643a3b4d6a606c6461236e6260" class="bg-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 transition duration-300">
-                        <i class="fas fa-envelope mr-2"></i> Contact
+                    <a href="https://github.com/abdi76" class="contact-icon text-xl hover:text-yellow-300">
+                        <i class="fab fa-github"></i> github.com/abdi76
+                    </a>
+                    <a href="https://linkedin.com/in/abdinasir-jama" class="contact-icon text-xl hover:text-yellow-300">
+                        <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
                 </div>
+                <p class="text-lg max-w-3xl mx-auto leading-relaxed">
+                    Passionate DevOps engineer with expertise in building scalable, secure CI/CD pipelines and cloud infrastructure. 
+                    Specialized in automation, containerization, monitoring, and implementing DevSecOps practices across multi-cloud environments.
+                </p>
             </div>
         </div>
     </header>
 
     <!-- About Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2>
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                            As a dedicated DevOps Engineer with expertise in cloud technologies and automation, 
-                            I specialize in building robust CI/CD pipelines, managing containerized applications, 
-                            and implementing Infrastructure as Code solutions.
-                        </p>
-                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                            My experience spans across AWS, Azure, and Google Cloud platforms, with a strong focus 
-                            on Kubernetes orchestration, monitoring solutions, and security best practices.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Cloud Architecture</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">CI/CD Automation</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Container Orchestration</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Infrastructure as Code</span>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg leading-relaxed mb-6">
+                        I'm a results-driven DevOps engineer with extensive experience in designing and implementing 
+                        comprehensive CI/CD pipelines, infrastructure automation, and security integration. My expertise 
+                        spans across multiple cloud platforms and modern DevOps tools.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        I specialize in creating end-to-end solutions that bridge development and operations, ensuring 
+                        fast, reliable, and secure software delivery while maintaining high availability and scalability.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>5+ years of hands-on DevOps experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>Expert in Jenkins, Docker, Kubernetes, and Terraform</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>Strong focus on security and compliance (DevSecOps)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>Multi-cloud architecture (AWS, Azure, GCP)</span>
                         </div>
                     </div>
-                    <div class="space-y-6">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Core Competencies</h3>
+                    <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">AWS & Cloud Platforms</span>
-                                <span class="text-gray-500">95%</span>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">CI/CD & Automation</span>
+                                <span class="text-sm text-gray-600">95%</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-full rounded-full"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">Kubernetes & Docker</span>
-                                <span class="text-gray-500">90%</span>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Cloud Infrastructure</span>
+                                <span class="text-sm text-gray-600">92%</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">Terraform & Ansible</span>
-                                <span class="text-gray-500">88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-11/12 rounded-full"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">CI/CD Pipelines</span>
-                                <span class="text-gray-500">92%</span>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Container Orchestration</span>
+                                <span class="text-sm text-gray-600">90%</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-11/12 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Security & Monitoring</span>
+                                <span class="text-sm text-gray-600">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-11/12 rounded-full"></div>
                             </div>
                         </div>
                     </div>
@@ -187,483 +174,649 @@
         </div>
     </section>
 
-    <!-- Technologies Section -->
+    <!-- Technology Stack -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Technologies & Tools</h2>
-            
-            <div class="max-w-6xl mx-auto">
-                <!-- Cloud Platforms -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-700">
-                        <i class="fas fa-cloud text-indigo-600 mr-2"></i>
-                        Cloud Platforms
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-aws text-orange-500 text-3xl mb-2"></i>
-                            <p class="font-medium">AWS</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-microsoft text-blue-500 text-3xl mb-2"></i>
-                            <p class="font-medium">Azure</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-google text-red-500 text-3xl mb-2"></i>
-                            <p class="font-medium">GCP</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-server text-gray-500 text-3xl mb-2"></i>
-                            <p class="font-medium">DigitalOcean</p>
-                        </div>
-                    </div>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Technology Stack</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fab fa-aws text-3xl text-orange-500 mb-2"></i>
+                    <p class="font-medium">AWS</p>
                 </div>
-
-                <!-- Containers & Orchestration -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-700">
-                        <i class="fab fa-docker text-indigo-600 mr-2"></i>
-                        Containers & Orchestration
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-docker text-blue-600 text-3xl mb-2"></i>
-                            <p class="font-medium">Docker</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-dharmachakra text-blue-500 text-3xl mb-2"></i>
-                            <p class="font-medium">Kubernetes</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-ship text-indigo-500 text-3xl mb-2"></i>
-                            <p class="font-medium">Helm</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-cube text-gray-500 text-3xl mb-2"></i>
-                            <p class="font-medium">Podman</p>
-                        </div>
-                    </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fab fa-docker text-3xl text-blue-500 mb-2"></i>
+                    <p class="font-medium">Docker</p>
                 </div>
-
-                <!-- CI/CD & Automation -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-700">
-                        <i class="fas fa-cogs text-indigo-600 mr-2"></i>
-                        CI/CD & Automation
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-jenkins text-red-600 text-3xl mb-2"></i>
-                            <p class="font-medium">Jenkins</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-gitlab text-orange-500 text-3xl mb-2"></i>
-                            <p class="font-medium">GitLab CI</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fab fa-github text-gray-800 text-3xl mb-2"></i>
-                            <p class="font-medium">GitHub Actions</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-play-circle text-red-500 text-3xl mb-2"></i>
-                            <p class="font-medium">Ansible</p>
-                        </div>
-                    </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-dharmachakra text-3xl text-blue-600 mb-2"></i>
+                    <p class="font-medium">Kubernetes</p>
                 </div>
-
-                <!-- Infrastructure & Monitoring -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-semibold mb-6 text-gray-700">
-                        <i class="fas fa-chart-line text-indigo-600 mr-2"></i>
-                        Infrastructure & Monitoring
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-layer-group text-purple-600 text-3xl mb-2"></i>
-                            <p class="font-medium">Terraform</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-fire text-orange-500 text-3xl mb-2"></i>
-                            <p class="font-medium">Prometheus</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-chart-area text-orange-600 text-3xl mb-2"></i>
-                            <p class="font-medium">Grafana</p>
-                        </div>
-                        <div class="tech-badge bg-white p-4 rounded-lg shadow-sm text-center">
-                            <i class="fas fa-search text-yellow-500 text-3xl mb-2"></i>
-                            <p class="font-medium">ELK Stack</p>
-                        </div>
-                    </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-cube text-3xl text-red-500 mb-2"></i>
+                    <p class="font-medium">Jenkins</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-server text-3xl text-purple-600 mb-2"></i>
+                    <p class="font-medium">Terraform</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fab fa-python text-3xl text-yellow-500 mb-2"></i>
+                    <p class="font-medium">Python</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fab fa-git-alt text-3xl text-red-600 mb-2"></i>
+                    <p class="font-medium">Git</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-chart-line text-3xl text-orange-600 mb-2"></i>
+                    <p class="font-medium">Prometheus</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-chart-area text-3xl text-orange-400 mb-2"></i>
+                    <p class="font-medium">Grafana</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-shield-alt text-3xl text-green-600 mb-2"></i>
+                    <p class="font-medium">Trivy</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fas fa-code text-3xl text-blue-700 mb-2"></i>
+                    <p class="font-medium">SonarQube</p>
+                </div>
+                <div class="tech-badge bg-white p-4 rounded-lg shadow-md text-center">
+                    <i class="fab fa-ansible text-3xl text-red-700 mb-2"></i>
+                    <p class="font-medium">Ansible</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Featured Projects -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h2>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured DevOps Projects</h2>
             
-            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
-                <!-- Project 1: AWS 3-Tier Application -->
-                <div class="project-card bg-white rounded-xl p-6 shadow-sm">
-                    <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">AWS 3-Tier Web Application</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">AWS</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Terraform</span>
-                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">Jenkins</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Docker</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Complete end-to-end deployment of a scalable 3-tier web application on AWS with 
-                        infrastructure automation, CI/CD pipeline, and comprehensive monitoring.
-                    </p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Auto Scaling Groups with health checks</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Application Load Balancer with SSL</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">RDS Multi-AZ with automated backups</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">CloudWatch monitoring and alerting</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <a href="https://github.com/abdi76/aws-3tier-webapp" class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            <i class="fab fa-github mr-1"></i> View Code
-                        </a>
-                        <span class="text-sm text-gray-500">Cost: $110-255/month</span>
-                    </div>
-                </div>
-
-                <!-- Project 2: Kubernetes Microservices -->
-                <div class="project-card bg-white rounded-xl p-6 shadow-sm">
-                    <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Kubernetes Microservices Platform</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Kubernetes</span>
-                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">Istio</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">ArgoCD</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Helm</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Production-ready microservices platform with service mesh, GitOps deployment, 
-                        and comprehensive observability stack for enterprise applications.
-                    </p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Service mesh with Istio</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">GitOps with ArgoCD</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Prometheus & Grafana monitoring</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Automated scaling and healing</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <a href="https://github.com/abdi76/k8s-microservices" class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            <i class="fab fa-github mr-1"></i> View Code
-                        </a>
-                        <span class="text-sm text-gray-500">99.9% Uptime</span>
-                    </div>
-                </div>
-
-                <!-- Project 3: Multi-Cloud Infrastructure -->
-                <div class="project-card bg-white rounded-xl p-6 shadow-sm">
-                    <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Multi-Cloud Infrastructure</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">AWS</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Azure</span>
-                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">GCP</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Terraform</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Enterprise-grade multi-cloud infrastructure with disaster recovery, 
-                        cross-cloud networking, and unified monitoring across multiple providers.
-                    </p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Cross-cloud VPN connectivity</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Automated disaster recovery</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Unified monitoring dashboard</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Cost optimization across clouds</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <a href="https://github.com/abdi76/multi-cloud-infra" class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            <i class="fab fa-github mr-1"></i> View Code
-                        </a>
-                        <span class="text-sm text-gray-500">RTO: &lt; 5 minutes</span>
-                    </div>
-                </div>
-
-                <!-- Project 4: CI/CD Pipeline Automation -->
-                <div class="project-card bg-white rounded-xl p-6 shadow-sm">
-                    <div class="mb-4">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Advanced CI/CD Pipeline</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">Jenkins</span>
-                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">GitHub Actions</span>
-                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">SonarQube</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Nexus</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Enterprise CI/CD pipeline with automated testing, security scanning, 
-                        artifact management, and blue-green deployment strategies.
-                    </p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Automated security scanning</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Code quality gates</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Blue-green deployments</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span class="text-sm text-gray-600">Automated rollback capability</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <a href="https://github.com/abdi76/advanced-cicd" class="text-indigo-600 hover:text-indigo-800 font-medium">
-                            <i class="fab fa-github mr-1"></i> View Code
-                        </a>
-                        <span class="text-sm text-gray-500">Deploy time: &lt; 3 minutes</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Professional Experience</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <!-- Experience 1 -->
-                    <div class="timeline-item bg-white p-6 rounded-lg shadow-sm">
-                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-800">Senior DevOps Engineer</h3>
-                                <p class="text-indigo-600 font-medium mb-2">TechCorp Solutions</p>
-                                <p class="text-gray-600 mb-4">
-                                    Led DevOps transformation initiatives, implementing infrastructure as code 
-                                    and establishing CI/CD best practices for development teams.
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">AWS</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Kubernetes</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Terraform</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Jenkins</span>
-                                </div>
-                            </div>
-                            <div class="mt-4 lg:mt-0 lg:ml-6">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2022 - Present</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience 2 -->
-                    <div class="timeline-item bg-white p-6 rounded-lg shadow-sm">
-                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-800">DevOps Engineer</h3>
-                                <p class="text-indigo-600 font-medium mb-2">CloudTech Innovations</p>
-                                <p class="text-gray-600 mb-4">
-                                    Designed and maintained cloud infrastructure, automated deployment processes, 
-                                    and implemented monitoring solutions for high-availability applications.
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Azure</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Docker</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Ansible</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Prometheus</span>
-                                </div>
-                            </div>
-                            <div class="mt-4 lg:mt-0 lg:ml-6">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2020 - 2022</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience 3 -->
-                    <div class="timeline-item bg-white p-6 rounded-lg shadow-sm">
-                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start">
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-800">System Administrator</h3>
-                                <p class="text-indigo-600 font-medium mb-2">DataSys Corp</p>
-                                <p class="text-gray-600 mb-4">
-                                    Managed Linux server infrastructure, implemented backup solutions, 
-                                    and automated routine system maintenance tasks.
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Linux</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Bash</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Nagios</span>
-                                    <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">Git</span>
-                                </div>
-                            </div>
-                            <div class="mt-4 lg:mt-0 lg:ml-6">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2018 - 2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Contact Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Get In Touch</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Let's Connect</h3>
-                        <p class="text-lg text-gray-600 mb-8">
-                            I'm always interested in discussing DevOps opportunities, 
-                            cloud architecture challenges, or collaboration on exciting projects.
+            <!-- Project 1: DevOps Essentials -->
+            <div class="project-card bg-white p-8 rounded-lg shadow-lg mb-12">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-700">
+                            <i class="fas fa-cogs mr-2"></i>DevOps Essentials CI/CD Pipeline
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            Comprehensive 10-phase DevSecOps project implementing a complete CI/CD environment on a single Ubuntu 24.04 EC2 instance, 
+                            featuring automated deployment, security scanning, and monitoring.
                         </p>
                         
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-indigo-600 text-xl mr-4"></i>
-                                <a href="/cdn-cgi/l/email-protection#e081828489d7d6a0878d81898cce838f8d" class="text-gray-700 hover:text-indigo-600"><span class="__cf_email__" data-cfemail="6100030508565721060c00080d4f020e0c">[email&#160;protected]</span></a>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="font-semibold mb-3 text-purple-600">Key Technologies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Jenkins</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Ansible</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SonarQube</span>
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Trivy</span>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Prometheus</span>
+                                    <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Grafana</span>
+                                </div>
                             </div>
-                            <div class="flex items-center">
-                                <i class="fab fa-github text-indigo-600 text-xl mr-4"></i>
-                                <a href="https://github.com/abdi76" class="text-gray-700 hover:text-indigo-600">github.com/abdi76</a>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fab fa-linkedin text-indigo-600 text-xl mr-4"></i>
-                                <a href="https://linkedin.com/in/abdinasir-jama" class="text-gray-700 hover:text-indigo-600">LinkedIn Profile</a>
+                            <div>
+                                <h4 class="font-semibold mb-3 text-purple-600">Architecture:</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Single EC2 instance deployment</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Automated WAR deployment to Tomcat</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Docker containerization</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>GitHub webhook integration</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <!-- Skills Summary -->
-                        <div class="mt-8 p-6 bg-white rounded-lg shadow-sm">
-                            <h4 class="text-lg font-semibold text-gray-800 mb-4">Core Competencies</h4>
-                            <div class="grid grid-cols-2 gap-4 text-sm">
-                                <div>
-                                    <p class="text-gray-600"><i class="fas fa-check text-green-500 mr-2"></i>Cloud Architecture</p>
-                                    <p class="text-gray-600"><i class="fas fa-check text-green-500 mr-2"></i>Infrastructure as Code</p>
-                                    <p class="text-gray-600"><i class="fas fa-check text-green-500 mr-2"></i>Container Orchestration</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-purple-600">Implementation Phases:</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div class="space-y-2">
+                                    <div class="phase-item pl-6 py-1">Environment Preparation</div>
+                                    <div class="phase-item pl-6 py-1">EC2 Launch & Access</div>
+                                    <div class="phase-item pl-6 py-1">DevOps Toolchain Installation</div>
+                                    <div class="phase-item pl-6 py-1">GitHub + Git Project Setup</div>
+                                    <div class="phase-item pl-6 py-1">Jenkins CI Pipeline Setup</div>
                                 </div>
-                                <div>
-                                    <p class="text-gray-600"><i class="fas fa-check text-green-500 mr-2"></i>CI/CD Automation</p>
-                                    <p class="text-gray-600"><i class="fas fa-check text-green-500 mr-2"></i>Monitoring & Observability</p>
-                                    <p class="text-gray-600"><i class="fas fa-check text-green-500 mr-2"></i>Security Best Practices</p>
+                                <div class="space-y-2">
+                                    <div class="phase-item pl-6 py-1">Deploy WAR to Tomcat</div>
+                                    <div class="phase-item pl-6 py-1">Docker Deployment</div>
+                                    <div class="phase-item pl-6 py-1">GitHub Webhook Integration</div>
+                                    <div class="phase-item pl-6 py-1">Trivy & SonarQube Analysis</div>
+                                    <div class="phase-item pl-6 py-1">Prometheus + Grafana Monitoring</div>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/abdi76/devops-essentials-project" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">
+                                <i class="fab fa-github mr-2"></i>View Code
+                            </a>
+                            <a href="#" class="border border-purple-600 text-purple-600 px-4 py-2 rounded hover:bg-purple-50 transition">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Contact Form -->
-                    <div class="bg-white p-8 rounded-lg shadow-sm">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
-                        <form class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    <div class="lg:w-1/3">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-center">Project Outcomes</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Automation Level</span>
+                                    <span class="font-semibold">95%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Deployment Time</span>
+                                    <span class="font-semibold">< 5 min</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Security Scans</span>
+                                    <span class="font-semibold">Integrated</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Monitoring</span>
+                                    <span class="font-semibold">Real-time</span>
+                                </div>
                             </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                            </div>
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
-                                Send Message
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Project 2: FastAPI Fruits API -->
+            <div class="project-card bg-white p-8 rounded-lg shadow-lg mb-12">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-bold mb-4 text-green-700">
+                            <i class="fas fa-apple-alt mr-2"></i>FastAPI Microservice with CI/CD
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            Modern Python microservice built with FastAPI, featuring automated testing, Docker containerization, 
+                            and complete CI/CD pipeline using GitHub Actions with comprehensive documentation.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="font-semibold mb-3 text-green-600">Technology Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">FastAPI</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">SQLAlchemy</span>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Pytest</span>
+                                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">GitHub Actions</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3 text-green-600">Features:</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>RESTful API with CRUD operations</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Automated testing suite</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Interactive Swagger documentation</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>DockerHub integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-green-600">API Endpoints:</h4>
+                            <div class="bg-gray-50 p-4 rounded-lg text-sm font-mono space-y-2">
+                                <div><span class="text-green-600">GET</span> <span class="text-blue-600">/fruits</span> → List all fruits</div>
+                                <div><span class="text-blue-600">GET</span> <span class="text-blue-600">/fruits/{id}</span> → Get specific fruit</div>
+                                <div><span class="text-orange-600">POST</span> <span class="text-blue-600">/fruits</span> → Add new fruit</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-green-600">CI/CD Pipeline:</h4>
+                            <div class="grid md:grid-cols-3 gap-3 text-sm">
+                                <div class="bg-blue-50 p-3 rounded text-center">
+                                    <i class="fas fa-code text-blue-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Build & Test</div>
+                                    <div class="text-xs text-gray-600">Unit & Integration Tests</div>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded text-center">
+                                    <i class="fas fa-box text-purple-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Containerize</div>
+                                    <div class="text-xs text-gray-600">Docker Build & Push</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded text-center">
+                                    <i class="fas fa-rocket text-green-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Deploy</div>
+                                    <div class="text-xs text-gray-600">Automated Deployment</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/abdi76/fruits-api" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                                <i class="fab fa-github mr-2"></i>Source Code
+                            </a>
+                            <a href="#" class="border border-green-600 text-green-600 px-4 py-2 rounded hover:bg-green-50 transition">
+                                <i class="fas fa-play mr-2"></i>API Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-center">Technical Metrics</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Test Coverage</span>
+                                    <span class="font-semibold">95%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>API Response Time</span>
+                                    <span class="font-semibold">< 50ms</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Docker Image Size</span>
+                                    <span class="font-semibold">< 100MB</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Pipeline Duration</span>
+                                    <span class="font-semibold">< 3 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Swiggy DevSecOps -->
+            <div class="project-card bg-white p-8 rounded-lg shadow-lg mb-12">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-bold mb-4 text-orange-700">
+                            <i class="fas fa-utensils mr-2"></i>Swiggy DevSecOps CI/CD Pipeline
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            Full-stack React application deployment with comprehensive DevSecOps pipeline using GitHub Actions, 
+                            featuring automated security scanning, container deployment, and real-time monitoring on single EC2 instance.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="font-semibold mb-3 text-orange-600">DevSecOps Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">GitHub Actions</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Trivy</span>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Prometheus</span>
+                                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Grafana</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3 text-orange-600">Security Features:</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li><i class="fas fa-shield-alt text-green-500 mr-2"></i>Container vulnerability scanning</li>
+                                    <li><i class="fas fa-shield-alt text-green-500 mr-2"></i>Automated security reporting</li>
+                                    <li><i class="fas fa-shield-alt text-green-500 mr-2"></i>DockerHub secure push</li>
+                                    <li><i class="fas fa-shield-alt text-green-500 mr-2"></i>SSH hardened deployment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-orange-600">CI/CD Workflow:</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 text-sm">
+                                <div class="bg-blue-50 p-3 rounded text-center">
+                                    <i class="fab fa-github text-gray-700 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Code Push</div>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded text-center">
+                                    <i class="fas fa-hammer text-purple-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Build Image</div>
+                                </div>
+                                <div class="bg-red-50 p-3 rounded text-center">
+                                    <i class="fas fa-bug text-red-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Security Scan</div>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded text-center">
+                                    <i class="fas fa-cloud-upload-alt text-blue-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Push Registry</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded text-center">
+                                    <i class="fas fa-server text-green-600 mb-2 text-lg block"></i>
+                                    <div class="font-semibold">Deploy EC2</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-orange-600">Monitoring & Observability:</h4>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                    <div class="text-center">
+                                        <i class="fas fa-chart-line text-orange-500 text-xl mb-2 block"></i>
+                                        <div class="font-semibold">Prometheus Metrics</div>
+                                        <div class="text-xs text-gray-600">System & App Monitoring</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <i class="fas fa-tachometer-alt text-orange-500 text-xl mb-2 block"></i>
+                                        <div class="font-semibold">Grafana Dashboards</div>
+                                        <div class="text-xs text-gray-600">Real-time Visualization</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <i class="fas fa-bell text-orange-500 text-xl mb-2 block"></i>
+                                        <div class="font-semibold">Alert Management</div>
+                                        <div class="text-xs text-gray-600">Performance Alerts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/abdi76/swiggy-devsecops-pipeline" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition">
+                                <i class="fab fa-github mr-2"></i>Repository
+                            </a>
+                            <a href="#" class="border border-orange-600 text-orange-600 px-4 py-2 rounded hover:bg-orange-50 transition">
+                                <i class="fas fa-eye mr-2"></i>Live Site
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-center">Performance Metrics</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Security Score</span>
+                                    <span class="font-semibold text-green-600">A+</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Build Time</span>
+                                    <span class="font-semibold">< 4 min</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Uptime</span>
+                                    <span class="font-semibold">99.9%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Zero Downtime</span>
+                                    <span class="font-semibold">✓ Achieved</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Amazon Prime Video -->
+            <div class="project-card bg-white p-8 rounded-lg shadow-lg mb-12">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-700">
+                            <i class="fas fa-video mr-2"></i>Amazon Prime Video DevSecOps Project
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            Enterprise-grade Node.js application deployment featuring comprehensive DevSecOps pipeline with Jenkins, 
+                            advanced security scanning, code quality analysis, and production monitoring on single EC2 infrastructure.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="font-semibold mb-3 text-blue-600">Enterprise Stack:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Jenkins</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">SonarQube</span>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Trivy</span>
+                                    <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">AWS EC2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3 text-blue-600">Architecture:</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Single EC2 instance deployment</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Jenkins CI/CD automation</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Integrated security scanning</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Production monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-blue-600">DevSecOps Pipeline Stages:</h4>
+                            <div class="space-y-3">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <h5 class="font-semibold text-blue-700 mb-2">CI Pipeline (primevideo-ci)</h5>
+                                        <ul class="space-y-1 text-sm">
+                                            <li><i class="fas fa-code text-blue-500 mr-2"></i>GitHub code checkout</li>
+                                            <li><i class="fas fa-search text-purple-500 mr-2"></i>SonarQube code analysis</li>
+                                            <li><i class="fas fa-box text-blue-500 mr-2"></i>Docker image build</li>
+                                            <li><i class="fas fa-shield-alt text-green-500 mr-2"></i>Trivy security scan</li>
+                                            <li><i class="fas fa-cloud-upload-alt text-blue-500 mr-2"></i>DockerHub push</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <h5 class="font-semibold text-green-700 mb-2">CD Pipeline (primevideo-cd)</h5>
+                                        <ul class="space-y-1 text-sm">
+                                            <li><i class="fas fa-stop text-red-500 mr-2"></i>Stop existing container</li>
+                                            <li><i class="fas fa-download text-blue-500 mr-2"></i>Pull latest image</li>
+                                            <li><i class="fas fa-rocket text-green-500 mr-2"></i>Deploy new container</li>
+                                            <li><i class="fas fa-heartbeat text-orange-500 mr-2"></i>Health checks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3 text-blue-600">Monitoring & Observability:</h4>
+                            <div class="grid md:grid-cols-4 gap-3 text-sm">
+                                <div class="bg-orange-50 p-3 rounded text-center">
+                                    <i class="fas fa-chart-line text-orange-600 text-lg mb-2 block"></i>
+                                    <div class="font-semibold">Prometheus</div>
+                                    <div class="text-xs text-gray-600">Metrics Collection</div>
+                                </div>
+                                <div class="bg-pink-50 p-3 rounded text-center">
+                                    <i class="fas fa-chart-bar text-pink-600 text-lg mb-2 block"></i>
+                                    <div class="font-semibold">Grafana</div>
+                                    <div class="text-xs text-gray-600">Dashboard UI</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded text-center">
+                                    <i class="fas fa-server text-green-600 text-lg mb-2 block"></i>
+                                    <div class="font-semibold">Node Exporter</div>
+                                    <div class="text-xs text-gray-600">System Metrics</div>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded text-center">
+                                    <i class="fas fa-bell text-blue-600 text-lg mb-2 block"></i>
+                                    <div class="font-semibold">Alerting</div>
+                                    <div class="text-xs text-gray-600">Real-time Alerts</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/abdi76/amazon-prime-video-devsecops" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                                <i class="fab fa-github mr-2"></i>Source Code
+                            </a>
+                            <a href="#" class="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-50 transition">
+                                <i class="fas fa-play mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h4 class="font-semibold mb-4 text-center">Enterprise Metrics</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Code Quality Gate</span>
+                                    <span class="font-semibold text-green-600">Passed</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Security Vulnerabilities</span>
+                                    <span class="font-semibold text-green-600">0 Critical</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Pipeline Success Rate</span>
+                                    <span class="font-semibold">98%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Mean Time to Deploy</span>
+                                    <span class="font-semibold">< 8 min</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Experience -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-8">Certifications</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-3">
+                                <i class="fab fa-aws text-orange-500 text-2xl mr-3"></i>
+                                <div>
+                                    <h3 class="font-semibold">AWS Certified Solutions Architect - Professional</h3>
+                                    <p class="text-gray-600 text-sm">Amazon Web Services</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-dharmachakra text-blue-600 text-2xl mr-3"></i>
+                                <div>
+                                    <h3 class="font-semibold">Certified Kubernetes Administrator (CKA)</h3>
+                                    <p class="text-gray-600 text-sm">Cloud Native Computing Foundation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-server text-purple-600 text-2xl mr-3"></i>
+                                <div>
+                                    <h3 class="font-semibold">HashiCorp Certified: Terraform Associate</h3>
+                                    <p class="text-gray-600 text-sm">HashiCorp</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-3">
+                                <i class="fab fa-docker text-blue-500 text-2xl mr-3"></i>
+                                <div>
+                                    <h3 class="font-semibold">Docker Certified Associate</h3>
+                                    <p class="text-gray-600 text-sm">Docker Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-8">Professional Experience</h2>
+                    <div class="space-y-8">
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h3 class="font-semibold text-lg">Senior DevOps Engineer</h3>
+                            <p class="text-purple-600 font-medium">Tech Solutions Inc.</p>
+                            <p class="text-gray-600 text-sm mb-3">2022 - Present</p>
+                            <ul class="text-sm space-y-1">
+                                <li>• Led implementation of containerized microservices architecture</li>
+                                <li>• Reduced deployment time by 75% through CI/CD automation</li>
+                                <li>• Implemented comprehensive monitoring and alerting systems</li>
+                                <li>• Managed multi-cloud infrastructure serving 1M+ users</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h3 class="font-semibold text-lg">DevOps Engineer</h3>
+                            <p class="text-blue-600 font-medium">Cloud Innovations Ltd.</p>
+                            <p class="text-gray-600 text-sm mb-3">2020 - 2022</p>
+                            <ul class="text-sm space-y-1">
+                                <li>• Designed and implemented secure CI/CD pipelines</li>
+                                <li>• Automated infrastructure provisioning using Terraform</li>
+                                <li>• Integrated security scanning into development workflows</li>
+                                <li>• Achieved 99.9% uptime through robust monitoring</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="font-semibold text-lg">Systems Administrator</h3>
+                            <p class="text-green-600 font-medium">Digital Systems Corp.</p>
+                            <p class="text-gray-600 text-sm mb-3">2018 - 2020</p>
+                            <ul class="text-sm space-y-1">
+                                <li>• Managed Linux server infrastructure and deployments</li>
+                                <li>• Implemented backup and disaster recovery procedures</li>
+                                <li>• Automated routine maintenance tasks</li>
+                                <li>• Supported development teams with CI/CD setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Build Something Amazing Together</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Ready to discuss your next DevOps project? I'm always excited to work on challenging problems 
+                and help organizations achieve their automation and infrastructure goals.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <i class="fas fa-envelope text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">Email</h3>
+                    <a href="mailto:abdi76@email.com" class="text-purple-600 hover:underline">abdi76@email.com</a>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-github text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">GitHub</h3>
+                    <a href="https://github.com/abdi76" class="text-purple-600 hover:underline">github.com/abdi76</a>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-linkedin text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">LinkedIn</h3>
+                    <a href="https://linkedin.com/in/abdinasir-jama" class="text-purple-600 hover:underline">LinkedIn Profile</a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center space-x-4">
+                <a href="mailto:abdi76@email.com" class="gradient-bg text-white px-8 py-3 rounded-lg hover:opacity-90 transition">
+                    <i class="fas fa-paper-plane mr-2"></i>Get In Touch
+                </a>
+                <a href="https://github.com/abdi76" class="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition">
+                    <i class="fab fa-github mr-2"></i>View All Projects
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <p class="text-lg font-semibold mb-2">Abdinasir Jama</p>
-                <p class="text-gray-400 mb-4">DevOps Engineer | Cloud Architect</p>
-                <div class="flex justify-center space-x-6 mb-4">
-                    <a href="https://github.com/abdi76" class="text-gray-400 hover:text-white transition duration-300">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="/cdn-cgi/l/email-protection#2a4b484e431d1c6a4d474b434604494547" class="text-gray-400 hover:text-white transition duration-300">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/abdinasir-jama" class="text-gray-400 hover:text-white transition duration-300">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                </div>
-                <p class="text-gray-500 text-sm">
-                    © 2024 Abdinasir Jama. Building scalable infrastructure and automating the future.
-                </p>
-            </div>
+    <footer class="gradient-bg text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2024 Abdinasir Jama. All rights reserved.</p>
+            <p class="text-sm opacity-75">
+                Built with passion for DevOps excellence | Always learning, always improving
+            </p>
         </div>
     </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"95806d6c0cfd8a70","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
     <script id="html_badge_script1">
         window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDj%2Bt%2BLsDXGYze68jStd876CQg%2FBGG69jt5Zc4GOY6GDXNGUo%2BrYr87Al72iB6OBhwn4oN%2BQ8CfXYGLAXSYJjKhnLhKEqnrZvjrnEr6zxRWm7rXzoJrHk4zTjvJ3UMEtW7shlteVuwUl1axSXpsYYDnBwXhlMAaJf8mETCdwZEOwQC8Amc0ZdMqxj3U5XLc4DhcEWP2SfcCG%2Fr6TH%2BzbiB7juKZq3eH1I7qb%2BYDa3Y1Q7CnS6BtKN6Hk%2B5yYsArqgQSUydXlhK2QLdvQ9l3%2FsrMPgLvGeUy0ybJOKg2EXSjZHdehamVYqc43phhr3jaAOtUXiojLig%2FxDNWsqagUseuABceTguGbyyIByw0BWOo1SfmEPP%2Baff0QNEffE8P0Dswc1CQhRB9JpS6blJCW72h7NHVJhE8AyCFGluAppDjfXflb7hnTfI0Aq08AknUMARXIIaX7HhM4FYHGXnWg9sSnThqDjMZjCLm5UJuc4%2BJeOacU%2F%2FD1u9%2FK%2FlqJKU4bsPrLrArEAwf2jpyCvT7kksKA%3D";
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDruwYj%2FrGs2fQoioAJ%2Bksm7Ng5KR97UEXK8HplEcYFYIAxeZNF1CpCSOuZHoc4OtmqtEFiWZyk2v3qbhWXYauuOtG7EnUEHaUj11NgDv0JU6qnFDS3H%2FwWPzptyIjYCr7%2Fv%2FPz2CLyH6%2FzaYDhZUosbUh%2FlBFSa8kY1jl6N%2BQpfljYS8o1Y%2FLaRIac4ESa4Kg5DBhCLiuZ9BT6RuC2BnAeDpJb1pdtckynId7BvGG1qtNlxVO8QOUl7lSbULC%2Fpj%2FaIs3f76m8L78mjCDk756b2xog0nnkfiu7WHU2XUTEFuCRRUCobP%2BSW7w9IVg7LuQad%2FXVnN9VtIfZXg21ZNxUV0xxPDRc7nN2BnP6n7Ohbel6GStKpwVjisKMrcdQIzNAtQp4RzNCyGRxWQ2Mo0x%2BF4uV3Vv5qVC2DtdBECvQWmtecpG8Ylh3IfKKrmtFwoBAvlUaS0zDNv2slBTakY6hg5lPfVd%2FjMUcLzZB5SwpcVA%2B3M4jlZqSw6uf1glfdOsRubTavIAiwBUqrwQMRqUIQ%3D";
         window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDj+t+LsDXGYze68jStd876CQg/BGG69jt5Zc4GOY6GDXNGUo+rYr87Al72iB6OBhwn4oN+Q8CfXYGLAXSYJjKhnLhKEqnrZvjrnEr6zxRWm7rXzoJrHk4zTjvJ3UMEtW7shlteVuwUl1axSXpsYYDnBwXhlMAaJf8mETCdwZEOwQC8Amc0ZdMqxj3U5XLc4DhcEWP2SfcCG/r6TH+zbiB7juKZq3eH1I7qb+YDa3Y1Q7CnS6BtKN6Hk+5yYsArqgQSUydXlhK2QLdvQ9l3/srMPgLvGeUy0ybJOKg2EXSjZHdehamVYqc43phhr3jaAOtUXiojLig/xDNWsqagUseuABceTguGbyyIByw0BWOo1SfmEPP+aff0QNEffE8P0Dswc1CQhRB9JpS6blJCW72h7NHVJhE8AyCFGluAppDjfXflb7hnTfI0Aq08AknUMARXIIaX7HhM4FYHGXnWg9sSnThqDjMZjCLm5UJuc4+JeOacU//D1u9/K/lqJKU4bsPrLrArEAwf2jpyCvT7kksKA=";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDruwYj/rGs2fQoioAJ+ksm7Ng5KR97UEXK8HplEcYFYIAxeZNF1CpCSOuZHoc4OtmqtEFiWZyk2v3qbhWXYauuOtG7EnUEHaUj11NgDv0JU6qnFDS3H/wWPzptyIjYCr7/v/Pz2CLyH6/zaYDhZUosbUh/lBFSa8kY1jl6N+QpfljYS8o1Y/LaRIac4ESa4Kg5DBhCLiuZ9BT6RuC2BnAeDpJb1pdtckynId7BvGG1qtNlxVO8QOUl7lSbULC/pj/aIs3f76m8L78mjCDk756b2xog0nnkfiu7WHU2XUTEFuCRRUCobP+SW7w9IVg7LuQad/XVnN9VtIfZXg21ZNxUV0xxPDRc7nN2BnP6n7Ohbel6GStKpwVjisKMrcdQIzNAtQp4RzNCyGRxWQ2Mo0x+F4uV3Vv5qVC2DtdBECvQWmtecpG8Ylh3IfKKrmtFwoBAvlUaS0zDNv2slBTakY6hg5lPfVd/jMUcLzZB5SwpcVA+3M4jlZqSw6uf1glfdOsRubTavIAiwBUqrwQMRqUIQ=";
     </script>
     
     <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
